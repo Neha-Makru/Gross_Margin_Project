@@ -23,7 +23,7 @@ RF_PARAMS = {
 }
 
 XGB_PARAMS = {
-    "n_estimators": 450,
+    "n_estimators": 300,
     "max_depth": 5,
     "learning_rate": 0.005,
     "subsample": 0.80,

@@ -119,8 +119,8 @@ xgb_metrics = pd.DataFrame({
 
 with pd.ExcelWriter(config.OUTPUT_EXCEL_PATH, engine="openpyxl") as writer:
     df.to_excel(writer, sheet_name="Predictions", index=False)
-    # xgb_metrics.to_excel(writer, sheet_name="XGBoost_Metrics", index=False)
-    rf_metrics.to_excel(writer, sheet_name="RandomForest_Metrics", index=False)
+    xgb_metrics.to_excel(writer, sheet_name="XGBoost_Metrics", index=False)
+    # rf_metrics.to_excel(writer, sheet_name="RandomForest_Metrics", index=False)
     importance_df.to_excel(writer, sheet_name="Feature_Importance", index=False)
 
 print(f"Production artifact successfully saved: {config.MODEL_PIPELINE_PATH}")
